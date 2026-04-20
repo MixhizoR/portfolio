@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Oğuz Selman Çetin | Backend Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        go: '#00ADD8',
+                        java: '#f89820',
+                        spring: '#6DB33F'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #00ADD8 0%, #6DB33F 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-pattern {
+            background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+
+        .break-words {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            hyphens: auto;
+        }
+    </style>
+    <base target="_blank">
+</head>
+
+<body class="bg-base-100 text-base-content hero-pattern">
+
+    <!-- Navbar -->
+    <div class="navbar bg-base-100/80 backdrop-blur-md sticky top-0 z-50 border-b border-base-300 px-3 md:px-4">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-sm md:btn-md lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-52">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#stack">Stack</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <a class="btn btn-ghost text-base md:text-xl font-bold tracking-tight px-1">OSC<span
+                    class="text-go">.</span></a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 gap-2">
+                <li><a href="#about" class="hover:text-go transition-colors">About</a></li>
+                <li><a href="#stack" class="hover:text-go transition-colors">Stack</a></li>
+                <li><a href="#experience" class="hover:text-go transition-colors">Experience</a></li>
+                <li><a href="#projects" class="hover:text-go transition-colors">Projects</a></li>
+                <li><a href="#contact" class="hover:text-go transition-colors">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end gap-1">
+            <a href="https://github.com/MixhizoR" target="_blank" class="btn btn-ghost btn-circle btn-sm md:btn-md">
+                <i class="fab fa-github text-lg md:text-xl"></i>
+            </a>
+            <a href="https://linkedin.com/in/oguz-selman-cetin" target="_blank"
+                class="btn btn-ghost btn-circle btn-sm md:btn-md">
+                <i class="fab fa-linkedin text-lg md:text-xl"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="min-h-[85vh] md:min-h-[90vh] flex items-center justify-center relative overflow-hidden px-4">
+        <div class="absolute inset-0 bg-gradient-to-br from-base-100 via-base-100 to-base-300 opacity-90"></div>
+        <div class="absolute top-20 left-4 md:left-10 w-48 h-48 md:w-72 md:h-72 bg-go/10 rounded-full blur-3xl"></div>
+        <div
+            class="absolute bottom-20 right-4 md:right-10 w-64 h-64 md:w-96 md:h-96 bg-spring/10 rounded-full blur-3xl">
+        </div>
+
+        <div class="container mx-auto relative z-10 text-center">
+            <div
+                class="badge badge-outline badge-md md:badge-lg mb-4 md:mb-6 px-3 py-2 text-xs md:text-sm font-medium border-go/30 text-go">
+                <i class="fas fa-server mr-2"></i> Backend Developer
+            </div>
+            <h1 class="text-3xl sm:text-5xl md:text-7xl font-extrabold mb-4 md:mb-6 tracking-tight leading-tight">
+                Oğuz Selman <span class="gradient-text">Çetin</span>
+            </h1>
+            <p
+                class="text-base sm:text-lg md:text-2xl text-base-content/70 max-w-2xl mx-auto mb-6 md:mb-8 leading-relaxed px-2 break-words">
+                I build <span class="text-go font-semibold">high-performance</span> backend systems,
+                optimize <span class="text-spring font-semibold">distributed architectures</span>,
+                and turn complex concurrency challenges into
+                <span class="text-java font-semibold">reliable, scalable services</span>.
+            </p>
+            <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 md:mb-12 px-2">
+                <div
+                    class="flex items-center gap-2 px-3 py-1.5 bg-base-200 rounded-full border border-base-300 text-xs md:text-base">
+                    <i class="fab fa-golang text-go text-base md:text-xl"></i>
+                    <span class="font-semibold">Go</span>
+                </div>
+                <div
+                    class="flex items-center gap-2 px-3 py-1.5 bg-base-200 rounded-full border border-base-300 text-xs md:text-base">
+                    <i class="fab fa-java text-java text-base md:text-xl"></i>
+                    <span class="font-semibold">Spring Boot</span>
+                </div>
+                <div
+                    class="flex items-center gap-2 px-3 py-1.5 bg-base-200 rounded-full border border-base-300 text-xs md:text-base">
+                    <i class="fas fa-database text-info text-base md:text-xl"></i>
+                    <span class="font-semibold">PostgreSQL</span>
+                </div>
+                <div
+                    class="flex items-center gap-2 px-3 py-1.5 bg-base-200 rounded-full border border-base-300 text-xs md:text-base">
+                    <i class="fas fa-layer-group text-warning text-base md:text-xl"></i>
+                    <span class="font-semibold">Microservices</span>
+                </div>
+            </div>
+            <!-- FIXED BUTTONS: full width stacked on mobile, side by side on sm+ -->
+            <div class="flex flex-col sm:flex-row justify-center gap-3 px-2 max-w-md sm:max-w-none mx-auto">
+                <a href="#projects"
+                    class="btn btn-primary bg-go hover:bg-go/90 border-none text-white btn-md sm:btn-lg px-6 sm:px-8 w-full sm:w-auto">
+                    View Projects <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                <a href="#contact"
+                    class="btn btn-outline btn-md sm:btn-lg px-6 sm:px-8 border-base-300 hover:border-go hover:text-go w-full sm:w-auto">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-16 md:py-20 bg-base-200">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl md:text-4xl font-bold mb-6 md:mb-8 text-center">About Me</h2>
+                <div class="card bg-base-100 shadow-xl border border-base-300">
+                    <div class="card-body p-5 md:p-8 lg:p-12">
+                        <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
+                            <div
+                                class="w-full md:w-2/3 space-y-3 md:space-y-4 text-sm md:text-lg leading-relaxed text-base-content/80 break-words">
+                                <p>
+                                    I'm a <strong>Computer Engineering student at Bozok University</strong> (GPA: 3.14)
+                                    specializing in
+                                    high-performance backend architectures. I obsess over optimization — whether it's
+                                    reducing latency,
+                                    eliminating race conditions, or designing resilient distributed systems.
+                                </p>
+                                <p>
+                                    My core stack revolves around <span class="text-go font-semibold">Go
+                                        (Gin/Fiber)</span> and
+                                    <span class="text-spring font-semibold">Java Spring Boot</span>, backed by
+                                    PostgreSQL, Redis, and RabbitMQ.
+                                    I design systems that handle high concurrency gracefully and recover from failures
+                                    automatically.
+                                </p>
+                                <p>
+                                    Beyond backend development, I bring a unique perspective from embedded systems —
+                                    understanding
+                                    hardware-software interaction at a low level makes me better at optimizing resource
+                                    usage and
+                                    building efficient protocols.
+                                </p>
+                            </div>
+                            <div class="w-full md:w-1/3 space-y-3 md:space-y-4">
+                                <div class="stats stats-vertical shadow bg-base-200 w-full">
+                                    <div class="stat py-3 md:py-4">
+                                        <div class="stat-title text-xs md:text-sm">GPA</div>
+                                        <div class="stat-value text-xl md:text-2xl text-go">3.14</div>
+                                        <div class="stat-desc text-xs">Bozok University</div>
+                                    </div>
+                                    <div class="stat py-3 md:py-4">
+                                        <div class="stat-title text-xs md:text-sm">Focus</div>
+                                        <div class="stat-value text-xl md:text-2xl text-spring">Backend</div>
+                                        <div class="stat-desc text-xs">Distributed Systems</div>
+                                    </div>
+                                    <div class="stat py-3 md:py-4">
+                                        <div class="stat-title text-xs md:text-sm">Location</div>
+                                        <div class="stat-value text-xl md:text-2xl">Ankara</div>
+                                        <div class="stat-desc text-xs">Türkiye</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stack -->
+    <section id="stack" class="py-16 md:py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-2xl md:text-4xl font-bold mb-8 md:mb-12 text-center">Tech Stack</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
+
+                <div class="card bg-base-200 border border-base-300 hover:border-go transition-all duration-300 group">
+                    <div class="card-body p-5 md:p-6">
+                        <div class="flex items-center gap-3 mb-3 md:mb-4">
+                            <div
+                                class="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-go/10 flex items-center justify-center group-hover:bg-go/20 transition-colors">
+                                <i class="fab fa-golang text-2xl md:text-3xl text-go"></i>
+                            </div>
+                            <h3 class="card-title text-lg md:text-xl">Go</h3>
+                        </div>
+                        <p class="text-sm md:text-base text-base-content/70 break-words">Gin & Fiber frameworks for
+                            high-performance APIs and microservices with goroutine-based concurrency.</p>
+                        <div class="card-actions mt-3 md:mt-4 flex-wrap">
+                            <div class="badge badge-outline badge-sm">Goroutines</div>
+                            <div class="badge badge-outline badge-sm">Channels</div>
+                            <div class="badge badge-outline badge-sm">Concurrency</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="card bg-base-200 border border-base-300 hover:border-spring transition-all duration-300 group">
+                    <div class="card-body p-5 md:p-6">
+                        <div class="flex items-center gap-3 mb-3 md:mb-4">
+                            <div
+                                class="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-spring/10 flex items-center justify-center group-hover:bg-spring/20 transition-colors">
+                                <i class="fab fa-java text-2xl md:text-3xl text-spring"></i>
+                            </div>
+                            <h3 class="card-title text-lg md:text-xl">Java Spring Boot</h3>
+                        </div>
+                        <p class="text-sm md:text-base text-base-content/70 break-words">Enterprise-grade REST APIs,
+                            JPA/Hibernate, security configurations, and scalable service architectures.</p>
+                        <div class="card-actions mt-3 md:mt-4 flex-wrap">
+                            <div class="badge badge-outline badge-sm">JPA</div>
+                            <div class="badge badge-outline badge-sm">Security</div>
+                            <div class="badge badge-outline badge-sm">JVM Tuning</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="card bg-base-200 border border-base-300 hover:border-info transition-all duration-300 group">
+                    <div class="card-body p-5 md:p-6">
+                        <div class="flex items-center gap-3 mb-3 md:mb-4">
+                            <div
+                                class="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-info/10 flex items-center justify-center group-hover:bg-info/20 transition-colors">
+                                <i class="fas fa-database text-xl md:text-2xl text-info"></i>
+                            </div>
+                            <h3 class="card-title text-lg md:text-xl">Databases</h3>
+                        </div>
+                        <p class="text-sm md:text-base text-base-content/70 break-words">PostgreSQL for relational data,
+                            MongoDB for document storage, MSSQL for enterprise integrations.</p>
+                        <div class="card-actions mt-3 md:mt-4 flex-wrap">
+                            <div class="badge badge-outline badge-sm">PostgreSQL</div>
+                            <div class="badge badge-outline badge-sm">MongoDB</div>
+                            <div class="badge badge-outline badge-sm">Query Optimization</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="card bg-base-200 border border-base-300 hover:border-warning transition-all duration-300 group">
+                    <div class="card-body p-5 md:p-6">
+                        <div class="flex items-center gap-3 mb-3 md:mb-4">
+                            <div
+                                class="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-warning/10 flex items-center justify-center group-hover:bg-warning/20 transition-colors">
+                                <i class="fas fa-layer-group text-xl md:text-2xl text-warning"></i>
+                            </div>
+                            <h3 class="card-title text-lg md:text-xl">Message Brokers</h3>
+                        </div>
+                        <p class="text-sm md:text-base text-base-content/70 break-words">RabbitMQ for async task queues,
+                            Redis for caching, distributed locking, and session management.</p>
+                        <div class="card-actions mt-3 md:mt-4 flex-wrap">
+                            <div class="badge badge-outline badge-sm">RabbitMQ</div>
+                            <div class="badge badge-outline badge-sm">Redis</div>
+                            <div class="badge badge-outline badge-sm">Redisson</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="card bg-base-200 border border-base-300 hover:border-secondary transition-all duration-300 group">
+                    <div class="card-body p-5 md:p-6">
+                        <div class="flex items-center gap-3 mb-3 md:mb-4">
+                            <div
+                                class="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
+                                <i class="fab fa-docker text-xl md:text-2xl text-secondary"></i>
+                            </div>
+                            <h3 class="card-title text-lg md:text-xl">DevOps</h3>
+                        </div>
+                        <p class="text-sm md:text-base text-base-content/70 break-words">Docker containerization,
+                            Prometheus & Grafana observability, CI/CD pipelines, Linux server management.</p>
+                        <div class="card-actions mt-3 md:mt-4 flex-wrap">
+                            <div class="badge badge-outline badge-sm">Docker</div>
+                            <div class="badge badge-outline badge-sm">Prometheus</div>
+                            <div class="badge badge-outline badge-sm">Grafana</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="card bg-base-200 border border-base-300 hover:border-error transition-all duration-300 group">
+                    <div class="card-body p-5 md:p-6">
+                        <div class="flex items-center gap-3 mb-3 md:mb-4">
+                            <div
+                                class="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-error/10 flex items-center justify-center group-hover:bg-error/20 transition-colors">
+                                <i class="fas fa-network-wired text-xl md:text-2xl text-error"></i>
+                            </div>
+                            <h3 class="card-title text-lg md:text-xl">Architecture</h3>
+                        </div>
+                        <p class="text-sm md:text-base text-base-content/70 break-words">Microservices design, RESTful
+                            API patterns, distributed systems, and concurrency synchronization.</p>
+                        <div class="card-actions mt-3 md:mt-4 flex-wrap">
+                            <div class="badge badge-outline badge-sm">Microservices</div>
+                            <div class="badge badge-outline badge-sm">Distributed Locks</div>
+                            <div class="badge badge-outline badge-sm">Async Processing</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="py-16 md:py-20 bg-base-200">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-2xl md:text-4xl font-bold mb-8 md:mb-12 text-center">Experience</h2>
+            <div class="max-w-4xl mx-auto">
+
+                <!-- Desktop Timeline -->
+                <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical hidden md:block">
+
+                    <li>
+                        <div class="timeline-middle">
+                            <div
+                                class="w-10 h-10 rounded-full bg-warning/20 flex items-center justify-center border-2 border-warning">
+                                <i class="fas fa-microchip text-warning text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="timeline-end mb-10">
+                            <div class="card bg-base-100 border border-warning/30 shadow-lg">
+                                <div class="card-body">
+                                    <div class="flex justify-between items-start flex-wrap gap-2">
+                                        <div>
+                                            <h3 class="card-title text-lg">Embedded Software Intern</h3>
+                                            <p class="text-warning font-semibold">İnfodif Yazılım ve Bilişim
+                                                Teknolojileri</p>
+                                        </div>
+                                        <span class="badge badge-warning badge-outline">Aug 2025 – Sep 2025</span>
+                                    </div>
+                                    <p class="text-base-content/70 mt-2 text-sm italic">Extra: Low-level systems
+                                        perspective</p>
+                                    <ul class="mt-3 space-y-2 text-base-content/80">
+                                        <li class="flex gap-2"><i class="fas fa-check text-warning mt-1 text-xs"></i>
+                                            Built concurrent Qt/C++ service architecture controlling power supplies via
+                                            TCP/IP & SCPI commands</li>
+                                        <li class="flex gap-2"><i class="fas fa-check text-warning mt-1 text-xs"></i>
+                                            Abstracted NI DAQmx hardware APIs into robust, error-controlled interfaces
+                                            improving reliability by 30%</li>
+                                        <li class="flex gap-2"><i class="fas fa-check text-warning mt-1 text-xs"></i>
+                                            Designed real-time hardware-software feedback loops for
+                                            millisecond-precision voltage monitoring</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="bg-warning/30" />
+                    </li>
+
+                    <li>
+                        <hr class="bg-base-300" />
+                        <div class="timeline-middle">
+                            <div
+                                class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center border-2 border-primary">
+                                <i class="fas fa-code text-primary text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="timeline-start md:text-end mb-10">
+                            <div class="card bg-base-100 border border-base-300 shadow-lg">
+                                <div class="card-body">
+                                    <div class="flex justify-between items-start flex-wrap gap-2 md:flex-row-reverse">
+                                        <div class="md:text-right">
+                                            <h3 class="card-title text-lg">Full-stack Developer</h3>
+                                            <p class="text-primary font-semibold">Bozok University IT Department</p>
+                                        </div>
+                                        <span class="badge badge-primary badge-outline">Nov 2024 – Dec 2024</span>
+                                    </div>
+                                    <ul class="mt-3 space-y-2 text-base-content/80 md:text-right">
+                                        <li class="flex gap-2 md:flex-row-reverse"><i
+                                                class="fas fa-check text-primary mt-1 text-xs"></i> Developed ASP.NET
+                                            Core backend for internal administrative workflows</li>
+                                        <li class="flex gap-2 md:flex-row-reverse"><i
+                                                class="fas fa-check text-primary mt-1 text-xs"></i> Optimized DB queries
+                                            reducing system response times by <strong>15%</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="bg-base-300" />
+                    </li>
+
+                    <li>
+                        <hr class="bg-base-300" />
+                        <div class="timeline-middle">
+                            <div
+                                class="w-10 h-10 rounded-full bg-go/20 flex items-center justify-center border-2 border-go">
+                                <i class="fab fa-python text-go text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="timeline-end mb-10">
+                            <div class="card bg-base-100 border border-base-300 shadow-lg">
+                                <div class="card-body">
+                                    <div class="flex justify-between items-start flex-wrap gap-2">
+                                        <div>
+                                            <h3 class="card-title text-lg">Web Development Lead</h3>
+                                            <p class="text-go font-semibold">Google Developer Student Clubs</p>
+                                        </div>
+                                        <span class="badge badge-outline border-go text-go">Nov 2023 – Nov 2024</span>
+                                    </div>
+                                    <ul class="mt-3 space-y-2 text-base-content/80">
+                                        <li class="flex gap-2"><i class="fas fa-check text-go mt-1 text-xs"></i> Scaled
+                                            Django backend services to support concurrent hackathon participants</li>
+                                        <li class="flex gap-2"><i class="fas fa-check text-go mt-1 text-xs"></i> Led
+                                            transition to modular microservices architecture reducing technical debt
+                                        </li>
+                                        <li class="flex gap-2"><i class="fas fa-check text-go mt-1 text-xs"></i>
+                                            Enforced Clean Code standards and mandatory code reviews for 10+ developers
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="bg-base-300" />
+                    </li>
+
+                    <li>
+                        <hr class="bg-base-300" />
+                        <div class="timeline-middle">
+                            <div
+                                class="w-10 h-10 rounded-full bg-spring/20 flex items-center justify-center border-2 border-spring">
+                                <i class="fab fa-microsoft text-spring text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="timeline-start md:text-end mb-10">
+                            <div class="card bg-base-100 border border-base-300 shadow-lg">
+                                <div class="card-body">
+                                    <div class="flex justify-between items-start flex-wrap gap-2 md:flex-row-reverse">
+                                        <div class="md:text-right">
+                                            <h3 class="card-title text-lg">Full-Stack Developer</h3>
+                                            <p class="text-spring font-semibold">Moonmach</p>
+                                        </div>
+                                        <span class="badge badge-outline border-spring text-spring">May 2023 – Jan
+                                            2024</span>
+                                    </div>
+                                    <ul class="mt-3 space-y-2 text-base-content/80 md:text-right">
+                                        <li class="flex gap-2 md:flex-row-reverse"><i
+                                                class="fas fa-check text-spring mt-1 text-xs"></i> Built real-time
+                                            ASP.NET Core control system for solar-powered cleaning robots</li>
+                                        <li class="flex gap-2 md:flex-row-reverse"><i
+                                                class="fas fa-check text-spring mt-1 text-xs"></i> Implemented proactive
+                                            performance tracking reducing maintenance downtime by <strong>20%</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- Mobile Cards (stacked) -->
+                <div class="md:hidden space-y-5">
+
+                    <div class="card bg-base-100 border-l-4 border-warning shadow-lg">
+                        <div class="card-body p-4">
+                            <div class="flex flex-col gap-1 mb-2">
+                                <div class="flex justify-between items-start gap-2">
+                                    <h3 class="card-title text-base leading-tight">Embedded Software Intern</h3>
+                                    <span
+                                        class="badge badge-warning badge-outline text-[10px] whitespace-nowrap shrink-0 mt-0.5">Aug
+                                        – Sep 2025</span>
+                                </div>
+                                <p class="text-warning font-semibold text-sm">İnfodif Yazılım ve Bilişim</p>
+                            </div>
+                            <p class="text-base-content/70 text-xs italic mb-2">Extra: Low-level systems perspective</p>
+                            <ul class="space-y-2 text-sm text-base-content/80 break-words">
+                                <li class="flex gap-2"><i class="fas fa-check text-warning mt-1 text-xs shrink-0"></i>
+                                    Built concurrent Qt/C++ service architecture via TCP/IP & SCPI</li>
+                                <li class="flex gap-2"><i class="fas fa-check text-warning mt-1 text-xs shrink-0"></i>
+                                    Abstracted NI DAQmx APIs improving reliability by 30%</li>
+                                <li class="flex gap-2"><i class="fas fa-check text-warning mt-1 text-xs shrink-0"></i>
+                                    Real-time hardware-software feedback loops</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card bg-base-100 border-l-4 border-primary shadow-lg">
+                        <div class="card-body p-4">
+                            <div class="flex flex-col gap-1 mb-2">
+                                <div class="flex justify-between items-start gap-2">
+                                    <h3 class="card-title text-base leading-tight">Full-stack Developer</h3>
+                                    <span
+                                        class="badge badge-primary badge-outline text-[10px] whitespace-nowrap shrink-0 mt-0.5">Nov
+                                        – Dec 2024</span>
+                                </div>
+                                <p class="text-primary font-semibold text-sm">Bozok University IT</p>
+                            </div>
+                            <ul class="space-y-2 text-sm text-base-content/80 break-words">
+                                <li class="flex gap-2"><i class="fas fa-check text-primary mt-1 text-xs shrink-0"></i>
+                                    ASP.NET Core backend for admin workflows</li>
+                                <li class="flex gap-2"><i class="fas fa-check text-primary mt-1 text-xs shrink-0"></i>
+                                    Optimized DB queries, -15% response time</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card bg-base-100 border-l-4 border-go shadow-lg">
+                        <div class="card-body p-4">
+                            <div class="flex flex-col gap-1 mb-2">
+                                <div class="flex justify-between items-start gap-2">
+                                    <h3 class="card-title text-base leading-tight">Web Development Lead</h3>
+                                    <span
+                                        class="badge badge-outline border-go text-go text-[10px] whitespace-nowrap shrink-0 mt-0.5">Nov
+                                        2023 – Nov 2024</span>
+                                </div>
+                                <p class="text-go font-semibold text-sm">Google DSC</p>
+                            </div>
+                            <ul class="space-y-2 text-sm text-base-content/80 break-words">
+                                <li class="flex gap-2"><i class="fas fa-check text-go mt-1 text-xs shrink-0"></i> Scaled
+                                    Django backend for hackathons</li>
+                                <li class="flex gap-2"><i class="fas fa-check text-go mt-1 text-xs shrink-0"></i> Led
+                                    microservices transition</li>
+                                <li class="flex gap-2"><i class="fas fa-check text-go mt-1 text-xs shrink-0"></i> Code
+                                    review standards for 10+ devs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card bg-base-100 border-l-4 border-spring shadow-lg">
+                        <div class="card-body p-4">
+                            <div class="flex flex-col gap-1 mb-2">
+                                <div class="flex justify-between items-start gap-2">
+                                    <h3 class="card-title text-base leading-tight">Full-Stack Developer</h3>
+                                    <span
+                                        class="badge badge-outline border-spring text-spring text-[10px] whitespace-nowrap shrink-0 mt-0.5">May
+                                        2023 – Jan 2024</span>
+                                </div>
+                                <p class="text-spring font-semibold text-sm">Moonmach</p>
+                            </div>
+                            <ul class="space-y-2 text-sm text-base-content/80 break-words">
+                                <li class="flex gap-2"><i class="fas fa-check text-spring mt-1 text-xs shrink-0"></i>
+                                    Real-time ASP.NET Core for solar robots</li>
+                                <li class="flex gap-2"><i class="fas fa-check text-spring mt-1 text-xs shrink-0"></i>
+                                    Proactive tracking, -20% downtime</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-16 md:py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-2xl md:text-4xl font-bold mb-8 md:mb-12 text-center">Featured Projects</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
+
+                <div
+                    class="card bg-base-200 border border-base-300 shadow-xl hover:shadow-2xl hover:border-spring transition-all duration-300 group">
+                    <div class="card-body p-5 md:p-6">
+                        <div class="flex justify-between items-start mb-3 md:mb-4">
+                            <div
+                                class="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-spring/10 flex items-center justify-center group-hover:bg-spring/20 transition-colors">
+                                <i class="fas fa-ticket-alt text-2xl md:text-3xl text-spring"></i>
+                            </div>
+                            <a href="https://github.com/MixhizoR/omniticket" target="_blank"
+                                class="btn btn-ghost btn-circle btn-sm">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                        <h3 class="card-title text-xl md:text-2xl mb-1">OmniTicket</h3>
+                        <p class="text-xs md:text-sm text-base-content/60 mb-3">Distributed Ticket Reservation System
+                        </p>
+                        <p class="text-sm md:text-base text-base-content/80 mb-4 md:mb-6 break-words">
+                            High-traffic microservices-ready reservation platform with distributed locking to prevent
+                            race conditions and async processing for heavy workloads.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 md:gap-2 mb-4 md:mb-6">
+                            <div class="badge badge-spring badge-outline badge-sm text-xs">Spring Boot</div>
+                            <div class="badge badge-info badge-outline badge-sm text-xs">PostgreSQL</div>
+                            <div class="badge badge-warning badge-outline badge-sm text-xs">Redis</div>
+                            <div class="badge badge-error badge-outline badge-sm text-xs">RabbitMQ</div>
+                            <div class="badge badge-secondary badge-outline badge-sm text-xs">Docker</div>
+                            <div class="badge badge-primary badge-outline badge-sm text-xs">Prometheus</div>
+                        </div>
+                        <div class="card-actions justify-end">
+                            <div class="text-xs text-base-content/50 flex items-center gap-1">
+                                <i class="fas fa-lock text-spring"></i> Distributed Locking via Redisson
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="card bg-base-200 border border-base-300 shadow-xl hover:shadow-2xl hover:border-info transition-all duration-300 group">
+                    <div class="card-body p-5 md:p-6">
+                        <div class="flex justify-between items-start mb-3 md:mb-4">
+                            <div
+                                class="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-info/10 flex items-center justify-center group-hover:bg-info/20 transition-colors">
+                                <i class="fas fa-brain text-2xl md:text-3xl text-info"></i>
+                            </div>
+                            <a href="https://github.com/MixhizoR/MindLoop" target="_blank"
+                                class="btn btn-ghost btn-circle btn-sm">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                        <h3 class="card-title text-xl md:text-2xl mb-1">Mindloop</h3>
+                        <p class="text-xs md:text-sm text-base-content/60 mb-3">AI-Powered Learning Platform</p>
+                        <p class="text-sm md:text-base text-base-content/80 mb-4 md:mb-6 break-words">
+                            Async FastAPI backend with spaced repetition algorithms, LLM integration, and PDF processing
+                            engines. Optimized flashcard generation via background tasks.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 md:gap-2 mb-4 md:mb-6">
+                            <div class="badge badge-info badge-outline badge-sm text-xs">FastAPI</div>
+                            <div class="badge badge-info badge-outline badge-sm text-xs">PostgreSQL</div>
+                            <div class="badge badge-secondary badge-outline badge-sm text-xs">Docker</div>
+                            <div class="badge badge-accent badge-outline badge-sm text-xs">Asyncio</div>
+                            <div class="badge badge-ghost badge-outline badge-sm text-xs">LLM</div>
+                        </div>
+                        <div class="card-actions justify-end">
+                            <div class="text-xs text-base-content/50 flex items-center gap-1">
+                                <i class="fas fa-chart-line text-info"></i> 35% better retention with SRS
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="card bg-base-200 border border-base-300 shadow-xl hover:shadow-2xl hover:border-primary transition-all duration-300 group">
+                    <div class="card-body p-5 md:p-6">
+                        <div class="flex justify-between items-start mb-3 md:mb-4">
+                            <div
+                                class="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                                <i class="fas fa-building text-2xl md:text-3xl text-primary"></i>
+                            </div>
+                            <a href="https://github.com/MixhizoR/PropPulse" target="_blank"
+                                class="btn btn-ghost btn-circle btn-sm">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                        <h3 class="card-title text-xl md:text-2xl mb-1">PropPulse</h3>
+                        <p class="text-xs md:text-sm text-base-content/60 mb-3">Secure Real Estate Platform</p>
+                        <p class="text-sm md:text-base text-base-content/80 mb-4 md:mb-6 break-words">
+                            Multi-tenant ASP.NET Core backend with JWT authentication, RBAC authorization, and automated
+                            CI/CD workflows via Git branching strategies.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 md:gap-2 mb-4 md:mb-6">
+                            <div class="badge badge-primary badge-outline badge-sm text-xs">ASP.NET Core</div>
+                            <div class="badge badge-warning badge-outline badge-sm text-xs">JWT</div>
+                            <div class="badge badge-error badge-outline badge-sm text-xs">RBAC</div>
+                            <div class="badge badge-success badge-outline badge-sm text-xs">CI/CD</div>
+                        </div>
+                        <div class="card-actions justify-end">
+                            <div class="text-xs text-base-content/50 flex items-center gap-1">
+                                <i class="fas fa-shield-alt text-primary"></i> Enterprise-grade security
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 md:py-20 bg-base-200">
+        <div class="container mx-auto px-4 md:px-6 max-w-4xl">
+            <div class="card bg-base-100 shadow-xl border border-base-300">
+                <div class="card-body p-6 md:p-8 lg:p-12 text-center">
+                    <h2 class="text-2xl md:text-4xl font-bold mb-3 md:mb-4">Let's Build Something Fast</h2>
+                    <p class="text-base md:text-lg text-base-content/70 mb-6 md:mb-8 max-w-xl mx-auto break-words">
+                        I'm currently open for backend-focused roles, internships, and freelance projects. If you need
+                        someone who obsesses over milliseconds and race conditions, let's talk.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 mb-6 md:mb-8">
+                        <a href="mailto:oguzselmancetin@hotmail.com"
+                            class="btn btn-outline btn-md md:btn-lg border-base-300 hover:border-go hover:bg-go/10 hover:text-go gap-2">
+                            <i class="fas fa-envelope"></i> Email
+                        </a>
+                        <a href="https://github.com/MixhizoR" target="_blank"
+                            class="btn btn-outline btn-md md:btn-lg border-base-300 hover:border-base-content hover:bg-base-content/10 gap-2">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://linkedin.com/in/oguz-selman-cetin" target="_blank"
+                            class="btn btn-outline btn-md md:btn-lg border-base-300 hover:border-blue-500 hover:bg-blue-500/10 hover:text-blue-500 gap-2">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+
+                    <div class="divider text-sm md:text-base">OR</div>
+
+                    <div
+                        class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-2 text-base-content/60 text-sm md:text-base">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-phone text-xs md:text-sm"></i>
+                            <span>+90 530 094 4159</span>
+                        </div>
+                        <span class="hidden sm:inline">•</span>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-map-marker-alt text-xs md:text-sm"></i>
+                            <span>Ankara, Türkiye</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-6 md:p-8 bg-base-100 text-base-content border-t border-base-300">
+        <aside>
+            <p class="font-bold text-base md:text-lg">Oğuz Selman Çetin</p>
+            <p class="text-xs md:text-sm text-base-content/60">Built with Go & Java spirit. Powered by DaisyUI.</p>
+            <p class="text-xs text-base-content/40 mt-2">© 2026 — All systems operational.</p>
+        </aside>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+
+</html>
